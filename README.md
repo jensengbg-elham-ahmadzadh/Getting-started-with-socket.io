@@ -22,5 +22,15 @@ app.use(exress.static(publicDir));
 In order to update multi clients on the web. I wrote    io.emit('countUpdated', count);  istead of socket.emit('countUpdated',
 count);
 
-I tried to make it simple and understandble.
+If we want to send a welcome message to the new user. we can emit a message on server. 
+socket.emit('message', 'welcome!')
+
+In client.js we gonna use socket.on to listen to the message. Then we can print it on terminal.
+socket.on('message, (message) => {
+console.log(message);
+});
+
+
+I tried to make the codes simple and understandble.
+
 
